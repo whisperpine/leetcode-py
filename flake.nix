@@ -25,10 +25,17 @@
               python313
               uv # python package and project manager
               just # just a command runner
+              husky # managing git hooks
             ];
             shellHook = ''
+              # install python project dependencies
               uv sync
+              # active python virtual environment
               source .venv/bin/activate
+              # install git hook managed by husky
+              if [ ! -e "./.husky/_" ]; then
+                husky install
+              fi
             '';
           };
         }
