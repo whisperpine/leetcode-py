@@ -26,6 +26,7 @@
               uv # python package and project manager
               just # just a command runner
               husky # managing git hooks
+              typos # check misspelling
             ];
             shellHook = ''
               # install python project dependencies
