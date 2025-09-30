@@ -25,6 +25,7 @@
               python313
               uv # python package and project manager
               just # just a command runner
+              cocogitto # conventional commit toolkit
               husky # managing git hooks
               typos # check misspelling
             ];
