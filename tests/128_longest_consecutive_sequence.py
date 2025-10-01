@@ -42,14 +42,11 @@ class Solution:
         result: int = 0
         s: set[int] = set(nums)
 
-        left_len: int = 0
-        right_len: int = 0
-
         for n in nums:
             if n in s:
                 s.remove(n)
-                left_len = get_left_length(n - 1, s)
-                right_len = get_right_length(n + 1, s)
+                left_len: int = get_left_length(n - 1, s)
+                right_len: int = get_right_length(n + 1, s)
                 result = max(result, 1 + left_len + right_len)
 
         return result
