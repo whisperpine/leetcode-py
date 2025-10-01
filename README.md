@@ -31,3 +31,4 @@ pytest path/to/test_file.py::test_function_name
 | Problem | Difficulty | Solution |
 | - | - | - |
 | 1. Two Sum | Easy | [1_two_sum.py](./tests/1_two_sum.py) |
+| 217. Contains Duplicate | Easy | [217_contains_duplicate.py](./tests/217_contains_duplicate.py) |
