@@ -33,3 +33,4 @@ pytest path/to/test_file.py::test_function_name
 | 1. Two Sum | Easy | [1_two_sum.py](./tests/1_two_sum.py) |
 | 217. Contains Duplicate | Easy | [217_contains_duplicate.py](./tests/217_contains_duplicate.py) |
 | 242. Valid Anagram | Easy | [242_valid_anagram.py](./tests/242_valid_anagram.py) |
+| 49. Group Anagrams | Medium | [49_group_anagrams.py](./tests/49_group_anagrams.py) |
