@@ -36,3 +36,4 @@ pytest path/to/test_file.py::test_function_name
 | 49. Group Anagrams | Medium | [49_group_anagrams.py](./tests/49_group_anagrams.py) |
 | 347. Top K Frequent Elements | Medium | [347_top_k_frequent_elements.py](./tests/347_top_k_frequent_elements.py) |
 | 238. Product of Array Except Self | Medium | [238_product_of_array_except_self.py](./tests/238_product_of_array_except_self.py) |
+| 128. Longest Consecutive Sequence | Medium | [128_longest_consecutive_sequence.py](./tests/128_longest_consecutive_sequence.py) |
