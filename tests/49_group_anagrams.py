@@ -6,19 +6,27 @@
 
 def test_case_1() -> None:
     strs: list[str] = ["eat", "tea", "tan", "ate", "nat", "bat"]
-    assert Solution().groupAnagrams(strs) == [
+    expected: list[list[str]] = [
         ["bat"],
         ["nat", "tan"],
         ["ate", "eat", "tea"],
     ]
+    output: list[list[str]] = sorted(Solution().groupAnagrams(strs))
+    assert set(frozenset(i) for i in output) == set(frozenset(i) for i in expected)
 
 
 def test_case_2() -> None:
-    assert Solution().groupAnagrams([""]) == [[""]]
+    strs: list[str] = [""]
+    expected: list[list[str]] = [[""]]
+    output: list[list[str]] = sorted(Solution().groupAnagrams(strs))
+    assert set(frozenset(i) for i in output) == set(frozenset(i) for i in expected)
 
 
 def test_case_3() -> None:
-    assert Solution().groupAnagrams(["a"]) == [["a"]]
+    strs: list[str] = ["a"]
+    expected: list[list[str]] = [["a"]]
+    output: list[list[str]] = sorted(Solution().groupAnagrams(strs))
+    assert set(frozenset(i) for i in output) == set(frozenset(i) for i in expected)
 
 
 # ---------------------------------
