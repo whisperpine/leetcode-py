@@ -34,3 +34,4 @@ pytest path/to/test_file.py::test_function_name
 | 217. Contains Duplicate | Easy | [217_contains_duplicate.py](./tests/217_contains_duplicate.py) |
 | 242. Valid Anagram | Easy | [242_valid_anagram.py](./tests/242_valid_anagram.py) |
 | 49. Group Anagrams | Medium | [49_group_anagrams.py](./tests/49_group_anagrams.py) |
+| 347. Top K Frequent Elements | Medium | [347_top_k_frequent_elements.py](./tests/347_top_k_frequent_elements.py) |
