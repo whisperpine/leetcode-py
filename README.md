@@ -43,6 +43,7 @@ pytest path/to/test_file.py::test_function_name
 | Problem | Difficulty | Solution |
 | - | - | - |
 | 125. Valid Palindrome | Easy | [125_valid_palindrome.py](./tests/125_valid_palindrome.py) |
+| 15. 3Sum | Medium | [15_3sum.py](./tests/15_3sum.py) |
 
 ### Stack
 
