@@ -50,3 +50,9 @@ pytest path/to/test_file.py::test_function_name
 | Problem | Difficulty | Solution |
 | - | - | - |
 | 20. Valid Parentheses | Easy | [20_valid_parentheses.py](./tests/20_valid_parentheses.py) |
+
+### Binary Search
+
+| Problem | Difficulty | Solution |
+| - | - | - |
+| 704. Binary Search | Easy | [704_binary_search.py](./tests/704_binary_search.py) |
