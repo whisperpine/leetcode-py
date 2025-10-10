@@ -57,3 +57,9 @@ pytest path/to/test_file.py::test_function_name
 | - | - | - |
 | 704. Binary Search | Easy | [704_binary_search.py](./tests/704_binary_search.py) |
 | 74. Search a 2D Matrix | Medium | [74_search_a_2d_matrix.py](./tests/74_search_a_2d_matrix.py) |
+
+### Sliding Window
+
+| Problem | Difficulty | Solution |
+| - | - | - |
+| 121. Best Time to Buy and Sell Stock | Easy | [121_best_time_to_buy_and_sell_stock.py](./tests/121_best_time_to_buy_and_sell_stock.py) |
