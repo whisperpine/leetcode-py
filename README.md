@@ -63,3 +63,4 @@ pytest path/to/test_file.py::test_function_name
 | Problem | Difficulty | Solution |
 | - | - | - |
 | 121. Best Time to Buy and Sell Stock | Easy | [121_best_time_to_buy_and_sell_stock.py](./tests/121_best_time_to_buy_and_sell_stock.py) |
+| 3. Longest Substring Without Repeating Characters | Medium | [3_longest_substring_without_repeating_characters.py](./tests/3_longest_substring_without_repeating_characters.py) |
