@@ -21,6 +21,7 @@
         { pkgs }:
         {
           default = pkgs.mkShell {
+            # The Nix packages installed in the dev environment.
             packages = with pkgs; [
               python313
               uv # python package and project manager
@@ -29,12 +30,17 @@
               husky # managing git hooks
               typos # check misspelling
             ];
+            # The shell script executed when the environment is activated.
             shellHook = ''
-              # install python project dependencies
+              # Print the last modified date of "flake.lock".
+              stat flake.lock | grep "Modify" |
+                awk '{printf "\"flake.lock\" last modified on: %s", $2}' &&
+                echo " ($((($(date +%s) - $(stat -c %Y flake.lock)) / 86400)) days ago)"
+              # Install python project dependencies.
               uv sync
-              # active python virtual environment
+              # Active python virtual environment.
               source .venv/bin/activate
-              # install git hook managed by husky
+              # Install git hooks managed by husky.
               if [ ! -e "./.husky/_" ]; then
                 husky install
               fi
