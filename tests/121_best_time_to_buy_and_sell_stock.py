@@ -4,23 +4,6 @@
 # Difficulty: Easy.
 
 
-def test_case_1() -> None:
-    assert Solution().maxProfit([7, 1, 5, 3, 6, 4]) == 5
-
-
-def test_case_2() -> None:
-    assert Solution().maxProfit([7, 6, 4, 3, 1]) == 0
-
-
-def test_case_3() -> None:
-    assert Solution().maxProfit([]) == 0
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
-
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
         if not prices:
@@ -39,3 +22,23 @@ class Solution:
             result = max(sell_price - buy_price, result)
 
         return result
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
+def test_case_1() -> None:
+    result: int = 5
+    assert Solution().maxProfit([7, 1, 5, 3, 6, 4]) == result
+
+
+def test_case_2() -> None:
+    result: int = 0
+    assert Solution().maxProfit([7, 6, 4, 3, 1]) == result
+
+
+def test_case_3() -> None:
+    result: int = 0
+    assert Solution().maxProfit([]) == result

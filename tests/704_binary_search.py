@@ -4,18 +4,6 @@
 # Difficulty: Easy.
 
 
-def test_case_1() -> None:
-    assert Solution().search([-1, 0, 3, 5, 9, 12], 9) == 4
-
-
-def test_case_2() -> None:
-    assert Solution().search([-1, 0, 3, 5, 9, 12], 2) == -1
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
 import bisect
 
 
@@ -25,3 +13,16 @@ class Solution:
             return -1
         index: int = bisect.bisect_left(nums, target)
         return index
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
+def test_case_1() -> None:
+    assert Solution().search([-1, 0, 3, 5, 9, 12], 9) == 4
+
+
+def test_case_2() -> None:
+    assert Solution().search([-1, 0, 3, 5, 9, 12], 2) == -1

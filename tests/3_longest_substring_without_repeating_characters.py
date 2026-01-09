@@ -4,6 +4,29 @@
 # Difficulty: Medium.
 
 
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        if not s:
+            return 0
+
+        start: int = 0
+        max_length: int = 1
+        # key: character, value: index
+        last_index: dict[str, int] = {}
+
+        for i, c in enumerate(s):
+            start = max(start, last_index.get(c, 0) + 1)
+            max_length = max(max_length, i - start + 1)
+            last_index[c] = i
+
+        return max_length
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
 def test_case_1() -> None:
     assert Solution().lengthOfLongestSubstring("abcabcbb") == 3
 
@@ -22,26 +45,3 @@ def test_case_4() -> None:
 
 def test_case_5() -> None:
     assert Solution().lengthOfLongestSubstring("aabaab!bb") == 3
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
-
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        if not s:
-            return 0
-
-        start: int = 0
-        max_length: int = 1
-        # key: character, value: index
-        last_index: dict[str, int] = {}
-
-        for i, c in enumerate(s):
-            start = max(start, last_index.get(c, 0) + 1)
-            max_length = max(max_length, i - start + 1)
-            last_index[c] = i
-
-        return max_length

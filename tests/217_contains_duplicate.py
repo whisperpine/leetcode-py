@@ -4,19 +4,6 @@
 # Difficulty: Easy.
 
 
-def test_case_1() -> None:
-    assert Solution().containsDuplicate([1, 2, 3, 3])
-
-
-def test_case_2() -> None:
-    assert Solution().containsDuplicate([1, 2, 3, 4]) == False
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
-
 class Solution:
     def containsDuplicate(self, nums: list[int]) -> bool:
         return len(nums) != len(set(nums))
@@ -29,3 +16,16 @@ class Solution:
     #         else:
     #             return True
     #     return False
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
+def test_case_1() -> None:
+    assert Solution().containsDuplicate([1, 2, 3, 3])
+
+
+def test_case_2() -> None:
+    assert not Solution().containsDuplicate([1, 2, 3, 4])

@@ -4,39 +4,6 @@
 # Difficulty: Easy.
 
 
-def test_case_1() -> None:
-    assert Solution().isValid("()")
-
-
-def test_case_2() -> None:
-    assert Solution().isValid("()[]{}")
-
-
-def test_case_3() -> None:
-    assert Solution().isValid("(]") == False
-
-
-def test_case_4() -> None:
-    assert Solution().isValid("([])")
-
-
-def test_case_5() -> None:
-    assert Solution().isValid("([)]") == False
-
-
-def test_case_6() -> None:
-    assert Solution().isValid("]") == False
-
-
-def test_case_7() -> None:
-    assert Solution().isValid("{") == False
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
-
 class Solution:
     def isValid(self, s: str) -> bool:
         stack: list[str] = []
@@ -61,4 +28,37 @@ class Solution:
                         return False
                 case _:
                     raise AssertionError("unreachable")
-        return False if stack else True
+        return not stack
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
+def test_case_1() -> None:
+    assert Solution().isValid("()")
+
+
+def test_case_2() -> None:
+    assert Solution().isValid("()[]{}")
+
+
+def test_case_3() -> None:
+    assert not Solution().isValid("(]")
+
+
+def test_case_4() -> None:
+    assert Solution().isValid("([])")
+
+
+def test_case_5() -> None:
+    assert not Solution().isValid("([)]")
+
+
+def test_case_6() -> None:
+    assert not Solution().isValid("]")
+
+
+def test_case_7() -> None:
+    assert not Solution().isValid("{")

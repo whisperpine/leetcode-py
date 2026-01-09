@@ -3,19 +3,6 @@
 # Topics: Arrays & Hashing.
 # Difficulty: Easy.
 
-
-def test_case_1() -> None:
-    assert Solution().isAnagram("anagram", "nagaram")
-
-
-def test_case_2() -> None:
-    assert Solution().isAnagram("rat", "car") == False
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
 from collections import Counter
 
 
@@ -26,3 +13,16 @@ class Solution:
         s_chars: Counter[str] = Counter(s)
         t_chars: Counter[str] = Counter(t)
         return s_chars == t_chars
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
+def test_case_1() -> None:
+    assert Solution().isAnagram("anagram", "nagaram")
+
+
+def test_case_2() -> None:
+    assert not Solution().isAnagram("rat", "car")

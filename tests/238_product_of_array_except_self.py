@@ -7,19 +7,6 @@
 # https://www.youtube.com/watch?v=bNvIQI2wAjk
 
 
-def test_case_1() -> None:
-    assert Solution().productExceptSelf([1, 2, 3, 4]) == [24, 12, 8, 6]
-
-
-def test_case_2() -> None:
-    assert Solution().productExceptSelf([-1, 1, 0, -3, 3]) == [0, 0, 9, 0, 0]
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
-
 class Solution:
     def productExceptSelf(self, nums: list[int]) -> list[int]:
         arr: list[int] = [1] * len(nums)
@@ -42,3 +29,16 @@ class Solution:
     #     for i in range(length - 2, -1, -1):
     #         postfix[i] = postfix[i + 1] * nums[i + 1]
     #     return [prefix[i] * postfix[i] for i in range(len(nums))]
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
+def test_case_1() -> None:
+    assert Solution().productExceptSelf([1, 2, 3, 4]) == [24, 12, 8, 6]
+
+
+def test_case_2() -> None:
+    assert Solution().productExceptSelf([-1, 1, 0, -3, 3]) == [0, 0, 9, 0, 0]

@@ -4,23 +4,6 @@
 # Difficulty: Medium.
 
 
-def test_case_1() -> None:
-    assert Solution().longestConsecutive([100, 4, 200, 1, 3, 2]) == 4
-
-
-def test_case_2() -> None:
-    assert Solution().longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]) == 9
-
-
-def test_case_3() -> None:
-    assert Solution().longestConsecutive([1, 0, 1, 2]) == 3
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
-
 def get_left_length(n: int, s: set[int]) -> int:
     result: int = 0
     if n in s:
@@ -50,3 +33,20 @@ class Solution:
                 result = max(result, 1 + left_len + right_len)
 
         return result
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
+def test_case_1() -> None:
+    assert Solution().longestConsecutive([100, 4, 200, 1, 3, 2]) == 4
+
+
+def test_case_2() -> None:
+    assert Solution().longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]) == 9
+
+
+def test_case_3() -> None:
+    assert Solution().longestConsecutive([1, 0, 1, 2]) == 3

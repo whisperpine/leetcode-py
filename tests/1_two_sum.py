@@ -4,6 +4,25 @@
 # Difficulty: Easy.
 
 
+class Solution:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        # k: element of nums, v: index
+        prev_dict: dict[int, int] = {}
+
+        for i, n in enumerate(nums):
+            diff: int = target - n
+            if diff in prev_dict:
+                return [prev_dict[diff], i]
+            prev_dict[n] = i
+
+        raise AssertionError("This line should be unreachable")
+
+
+# ---------------------- #
+# copy above to leetcode
+# ---------------------- #
+
+
 def test_case_1() -> None:
     nums: list[int] = [2, 7, 11, 15]
     target: int = 9
@@ -23,23 +42,3 @@ def test_case_3() -> None:
     target: int = 6
     output: list[int] = [0, 1]
     assert output == Solution().twoSum(nums, target)
-
-
-# ---------------------------------
-# copy to leetcode starts from here
-# ---------------------------------
-
-
-class Solution:
-    def twoSum(self, nums: list[int], target: int) -> list[int]:
-        # k: element of nums, v: index
-        prev_dict: dict[int, int] = {}
-
-        for i, n in enumerate(nums):
-            diff: int = target - n
-            if diff in prev_dict.keys():
-                return [prev_dict[diff], i]
-            else:
-                prev_dict[n] = i
-
-        raise AssertionError("This line should be unreachable")
