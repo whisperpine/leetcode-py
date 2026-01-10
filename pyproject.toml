@@ -68,6 +68,7 @@ select = [
   "TRY",   # tryceratops
 ]
 ignore = [
+  "COM812", # trailing comma missing 
   "S104",   # possible binding to all interfaces
   "S101",   # use of assert detected (useful for tests)
   "E501",   # line-too-long (configure line-length instead)
