@@ -29,6 +29,7 @@
               cocogitto # conventional commit toolkit
               typos # check misspelling
               prek # better pre-commit
+              rumdl # markdown linter
             ];
             # The shell script executed when the environment is activated.
             shellHook = /* sh */ ''
