@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     name: spell check with typos
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
         shell: nix shell nixpkgs#typos --quiet --command bash {0}
@@ -24,7 +24,7 @@ jobs:
     # Only run this step in the main branch.
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Check the latest commit message
         shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
@@ -34,7 +34,7 @@ jobs:
     name: lint markdown by rumdl
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run rumdl command
         shell: nix shell nixpkgs#rumdl --quiet --command bash {0}
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     name: lint and format by ruff
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
         shell: nix shell nixpkgs#ruff --quiet --command bash {0}
@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     name: use ty to check types
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
         shell: nix shell nixpkgs#uv nixpkgs#ty --quiet --command bash {0}
@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     name: run test cases
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run pytest command
         shell: nix shell nixpkgs#uv --quiet --command bash {0}
